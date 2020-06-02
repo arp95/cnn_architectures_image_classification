@@ -6,7 +6,7 @@ import numpy as np
 import cv2
 
 
-# define alexnet architecture
+# define alexnet architecture (remember input size: (224 x 224 x 3))
 class AlexNet(torch.nn.Module):
     
     # init function

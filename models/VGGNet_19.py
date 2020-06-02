@@ -6,12 +6,12 @@ import numpy as np
 import cv2
 
 
-# define VGG16 network
-class VGG16(nn.Module):
+# define VGG16 network (remember input size: (224 x 224 x 3))
+class VGG19(nn.Module):
     
     # init method
     def __init__(self, num_classes = 2):
-        super(VGG16, self).__init__()
+        super(VGG19, self).__init__()
         
         self.features = nn.Sequential(
             
@@ -43,10 +43,16 @@ class VGG16(nn.Module):
             nn.Conv2d(256, 256, kernel_size=3, padding=1),
             nn.BatchNorm2d(256),
             nn.ReLU(inplace=True),
+            nn.Conv2d(256, 256, kernel_size=3, padding=1),
+            nn.BatchNorm2d(256),
+            nn.ReLU(inplace=True),
             nn.MaxPool2d(kernel_size=2, stride=2),
             
             # fourth cnn block
             nn.Conv2d(256, 512, kernel_size=3, padding=1),
+            nn.BatchNorm2d(512),
+            nn.ReLU(inplace=True),
+            nn.Conv2d(512, 512, kernel_size=3, padding=1),
             nn.BatchNorm2d(512),
             nn.ReLU(inplace=True),
             nn.Conv2d(512, 512, kernel_size=3, padding=1),
@@ -67,6 +73,9 @@ class VGG16(nn.Module):
             nn.Conv2d(512, 512, kernel_size=3, padding=1),
             nn.BatchNorm2d(512),
             nn.ReLU(inplace=True),
+            nn.Conv2d(512, 512, kernel_size=3, padding=1),
+            nn.BatchNorm2d(512),
+            nn.ReLU(inplace=True),
             nn.MaxPool2d(kernel_size=2, stride=2)
         )
         
@@ -74,10 +83,10 @@ class VGG16(nn.Module):
         
         self.classifier = nn.Sequential(
             nn.Linear(512 * 7 * 7, 4096),
-            nn.ReLU(inplace = True),
+            nn.ReLU(inplace=True),
             nn.Dropout(0.5),
             nn.Linear(4096, 4096),
-            nn.ReLU(inplace = True),
+            nn.ReLU(inplace=True),
             nn.Dropout(0.5),
             nn.Linear(4096, num_classes),
             nn.LogSoftmax(dim=1)
