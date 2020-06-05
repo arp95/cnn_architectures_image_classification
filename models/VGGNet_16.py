@@ -7,11 +7,11 @@ import cv2
 
 
 # define VGG16 network (remember input size: (224 x 224 x 3))
-class VGG16(nn.Module):
+class VGGNet_16(nn.Module):
     
     # init method
     def __init__(self, num_classes = 2):
-        super(VGG16, self).__init__()
+        super(VGGNet_16, self).__init__()
         
         self.features = nn.Sequential(
             

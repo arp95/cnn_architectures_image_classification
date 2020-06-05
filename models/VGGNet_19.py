@@ -6,12 +6,12 @@ import numpy as np
 import cv2
 
 
-# define VGG16 network (remember input size: (224 x 224 x 3))
-class VGG19(nn.Module):
+# define VGG19 network (remember input size: (224 x 224 x 3))
+class VGGNet_19(nn.Module):
     
     # init method
     def __init__(self, num_classes = 2):
-        super(VGG19, self).__init__()
+        super(VGGNet_19, self).__init__()
         
         self.features = nn.Sequential(
             
