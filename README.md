@@ -40,3 +40,9 @@ Training Accuracy = 92.5% and Validation Accuracy = 92.3% (e = 60, lr = 0.01, m 
 
 ### Software Required
 To run the jupyter notebooks, use Python 3. Standard libraries like Numpy and PyTorch are used.
+
+
+### Credits
+The following links were helpful for this project:
+1. https://www.youtube.com/channel/UC88RC_4egFjV9jfjBHwDuvg
+2. https://github.com/pytorch/tutorials
