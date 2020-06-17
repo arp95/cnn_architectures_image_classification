@@ -23,7 +23,7 @@ The results after using different CNN architectures are given below:
 Training Accuracy = 96.64% and Validation Accuracy = 93.59% (e = 50, lr = 0.005, m = 0.9, bs = 64, wd = 0.001)
 
 2. <b>VGG-16</b><br>
-Training Accuracy = 93.1% and Validation Accuracy = 92.6% (e = 50, lr = 0.005, m = 0.9, bs = 32, wd = 5e-4)
+Training Accuracy = 97.55% and Validation Accuracy = 95.73% (e = 50, lr = 0.005, m = 0.9, bs = 32, wd = 0.001)
 
 3. <b>VGG-19</b><br>
 Training Accuracy = 91.5% and Validation Accuracy = 92.7% (e = 45, lr = 0.005, m = 0.9, bs = 32, wd = 5e-4)
