@@ -26,7 +26,7 @@ Training Accuracy = 96.64% and Validation Accuracy = 93.59% (e = 50, lr = 0.005,
 Training Accuracy = 97.55% and Validation Accuracy = 95.73% (e = 50, lr = 0.005, m = 0.9, bs = 32, wd = 0.001)
 
 3. <b>VGG-19</b><br>
-Training Accuracy = 91.5% and Validation Accuracy = 92.7% (e = 45, lr = 0.005, m = 0.9, bs = 32, wd = 5e-4)
+Training Accuracy = 97.25% and Validation Accuracy = 96.25% (e = 50, lr = 0.005, m = 0.9, bs = 32, wd = 5e-4)
 
 4. <b>DenseNet-121</b><br>
 Training Accuracy = 99.2% and Validation Accuracy = 92.9% (e = 60, lr = 0.003, m = 0.9, bs = 32, wd = 0.001)
