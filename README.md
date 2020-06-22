@@ -20,7 +20,12 @@ The data for the task of Dog-Cat image classification can be downloaded from: ht
 The results after using different CNN architectures are given below:
 
 1. <b>AlexNet</b><br>
+Not Pre-trained:
 Training Accuracy = 96.64% and Validation Accuracy = 93.59% (e = 50, lr = 0.005, m = 0.9, bs = 64, wd = 0.001)
+
+Pre-trained:
+Training Accuracy = 98.01% and Validation Accuracy = 96.63% (e = 50, lr = 0.005, m = 0.9, bs = 64, wd = 0.001)
+
 
 2. <b>VGG-16</b><br>
 Not Pre-trained:
@@ -29,12 +34,14 @@ Training Accuracy = 97.55% and Validation Accuracy = 95.73% (e = 50, lr = 0.005,
 Pre-trained:
 Training Accuracy = 99.27% and Validation Accuracy = 96.73% (e = 50, lr = 0.005, m = 0.9, bs = 32, wd = 0.001)
 
+
 3. <b>VGG-19</b><br>
 Not Pre-trained:
 Training Accuracy = 97.25% and Validation Accuracy = 96.25% (e = 50, lr = 0.005, m = 0.9, bs = 32, wd = 5e-4)
 
 Pre-trained:
 Training Accuracy = 99.13% and Validation Accuracy = 97.25% (e = 50, lr = 0.005, m = 0.9, bs = 32, wd = 5e-4)
+
 
 4. <b>DenseNet-121</b><br>
 Training Accuracy = 99.2% and Validation Accuracy = 92.9% (e = 60, lr = 0.003, m = 0.9, bs = 32, wd = 0.001)
