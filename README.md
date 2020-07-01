@@ -65,7 +65,12 @@ Training Accuracy = 99.94% and Validation Accuracy = 99.13% (e = 40, lr = 0.005,
 
 
 6. <b>ResNet-50</b><br>
+
+<b>Not Pre-trained</b>:
 Training Accuracy = 92.5% and Validation Accuracy = 92.3% (e = 60, lr = 0.01, m = 0.9, bs = 32, wd = 0.001)
+
+<b>Pre-trained</b>:
+Training Accuracy = 99.43% and Validation Accuracy = 98.43% (e = 40, lr = 0.005, m = 0.9, bs = 32, wd = 5e-4)<br>
 
 
 ### Software Required
