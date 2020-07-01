@@ -56,7 +56,12 @@ Training Accuracy = 98.73% and Validation Accuracy = 98.01% (e = 40, lr = 0.01, 
 
 
 5. <b>InceptionNet</b><br>
+
+<b>Not Pre-trained</b>:
 Training Accuracy = 98.1% and Validation Accuracy = 93.8% (e = 60, lr = 0.003, m = 0.9, bs = 32, wd = 0.001)
+
+<b>Pre-trained</b>:
+Training Accuracy = 99.94% and Validation Accuracy = 99.13% (e = 40, lr = 0.005, m = 0.9, bs = 32, wd = 5e-4)<br>
 
 
 6. <b>ResNet-50</b><br>
