@@ -7,7 +7,7 @@ from convolutions import *
 
 
 # AlexNet CNN Architecture (remember input size: (224 x 224 x 3))
-class AlexNet(nn.Module):
+class AlexNet(torch.nn.Module):
     
     # init function
     def __init__(self, num_classes = 2):

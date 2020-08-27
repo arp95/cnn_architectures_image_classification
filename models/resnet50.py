@@ -3,12 +3,10 @@ import torch
 import torch.nn as nn
 import torchvision
 import numpy as np
-import cv2
 
 
 # define ResNet_50 network (remember input size: (224 x 224 x 3))
 class ResNet_50(torch.nn.Module):
-    
     
     # block 1
     def block_1(self, in_features):
@@ -137,8 +135,7 @@ class ResNet_50(torch.nn.Module):
         self.avgpool = torch.nn.AdaptiveAvgPool2d(7)
         
         self.classifier = torch.nn.Sequential(
-            torch.nn.Linear(2048 * 7 * 7, num_classes),
-            torch.nn.LogSoftmax(dim=1)
+            torch.nn.Linear(2048 * 7 * 7, num_classes)
         )
         
         self.relu = torch.nn.Sequential(

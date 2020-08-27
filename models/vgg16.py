@@ -7,7 +7,7 @@ from convolutions import *
 
 
 # VGG16 network
-class VGG16(nn.Module):
+class VGG16(torch.nn.Module):
     
     # init method
     def __init__(self, num_classes = 2):
@@ -53,7 +53,7 @@ class VGG16(nn.Module):
             nn.Linear(4096, 4096),
             nn.ReLU(inplace=True),
             nn.Dropout(0.5),
-            nn.Linear(4096, num_classes),
+            nn.Linear(4096, num_classes)
         )
     
     # forward step

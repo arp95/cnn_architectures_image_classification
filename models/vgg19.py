@@ -7,7 +7,7 @@ from convolutions import *
 
 
 # VGG19 network
-class VGG19(nn.Module):
+class VGG19(torch.nn.Module):
     
     # init method
     def __init__(self, num_classes = 2):

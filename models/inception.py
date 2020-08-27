@@ -3,7 +3,6 @@ import torch
 import torch.nn as nn
 import torchvision
 import numpy as np
-import cv2
 
 
 # define InceptionNet network (remember input size: (224 x 224 x 3))
@@ -314,8 +313,7 @@ class InceptionNet(torch.nn.Module):
         
         self.classifier = torch.nn.Sequential(
             torch.nn.Dropout(0.4),
-            torch.nn.Linear(1024 * 7 * 7, num_classes),
-            torch.nn.LogSoftmax(dim=1)
+            torch.nn.Linear(1024 * 7 * 7, num_classes)
         )
         
         self.max_pooling = torch.nn.Sequential(
