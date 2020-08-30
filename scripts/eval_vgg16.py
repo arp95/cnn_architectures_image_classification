@@ -3,7 +3,6 @@ import torch
 import torch.nn as nn
 import torchvision
 import numpy as np
-from vgg16 import *
 import csv
 
 
@@ -23,7 +22,17 @@ test_loader = torch.utils.data.DataLoader(test_data, batch_size=1)
 
 # define model
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-model = VGG16(num_classes=num_classes).to(device)
+model = torchvision.models.vgg16_bn(pretrained=True)
+model.classifier = torch.nn.Sequential(
+    torch.nn.Linear(25088, 4096),
+    torch.nn.ReLU(inplace=True),
+    torch.nn.Dropout(),
+    torch.nn.Linear(4096, 4096),
+    torch.nn.ReLU(inplace=True),
+    torch.nn.Dropout(),
+    torch.nn.Linear(4096, num_classes)
+)
+model.to(device)
 model.load_state_dict(torch.load(model_path, map_location=device))
 
 # eval model
