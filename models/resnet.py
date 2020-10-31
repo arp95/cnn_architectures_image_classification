@@ -1,7 +1,6 @@
 # header files
 import torch
 import torch.nn as nn
-from torchvision.models.utils import load_state_dict_from_url
 from arma import *
 
 
@@ -184,36 +183,36 @@ class ResNet(nn.Module):
         return x
 
 
-def _resnet(arch, block, layers, progress, arma=False, **kwargs):
+def _resnet(arch, block, layers, arma=False, **kwargs):
     model = ResNet(block, layers, arma=arma, **kwargs)
     return model
 
 
-def resnet34(pretrained=False, progress=True, arma=False, **kwargs):
+def resnet34(arma=False, **kwargs):
     r"""ResNet-34 model from
     `"Deep Residual Learning for Image Recognition" <https://arxiv.org/pdf/1512.03385.pdf>`_
     Args:
         pretrained (bool): If True, returns a model pre-trained on ImageNet
         progress (bool): If True, displays a progress bar of the download to stderr
     """
-    return _resnet('resnet34', BasicBlock, [3, 4, 6, 3], progress, arma=arma, **kwargs)
+    return _resnet('resnet34', BasicBlock, [3, 4, 6, 3], arma=arma, **kwargs)
 
 
-def resnet50(pretrained=False, progress=True, arma=False, **kwargs):
+def resnet50(arma=False, **kwargs):
     r"""ResNet-50 model from
     `"Deep Residual Learning for Image Recognition" <https://arxiv.org/pdf/1512.03385.pdf>`_
     Args:
         pretrained (bool): If True, returns a model pre-trained on ImageNet
         progress (bool): If True, displays a progress bar of the download to stderr
     """
-    return _resnet('resnet50', Bottleneck, [3, 4, 6, 3], progress, arma=arma, **kwargs)
+    return _resnet('resnet50', Bottleneck, [3, 4, 6, 3], arma=arma, **kwargs)
 
 
-def resnet101(pretrained=False, progress=True, arma=False, **kwargs):
+def resnet101(arma=False, **kwargs):
     r"""ResNet-101 model from
     `"Deep Residual Learning for Image Recognition" <https://arxiv.org/pdf/1512.03385.pdf>`_
     Args:
         pretrained (bool): If True, returns a model pre-trained on ImageNet
         progress (bool): If True, displays a progress bar of the download to stderr
     """
-    return _resnet('resnet101', Bottleneck, [3, 4, 23, 3], progress, arma=arma, **kwargs)
+    return _resnet('resnet101', Bottleneck, [3, 4, 23, 3], arma=arma, **kwargs)
