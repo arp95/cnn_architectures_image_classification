@@ -6,7 +6,7 @@ import torch.utils.checkpoint as cp
 from collections import OrderedDict
 from torch import Tensor
 from torch.jit.annotations import List
-from arma import *
+from .arma import *
 
 
 # required functions
